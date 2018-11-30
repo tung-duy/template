@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Website - Title here</title>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="fonts/md-fonts/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!-- animate css -->
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css" />
+
+    <!-- jquery-loading -->
+    <link
+      rel="stylesheet"
+      href="libs/jquery-loading/dist/jquery.loading.min.css"
+    />
+    <!-- Tùng Duy main style -->
+    <link id="pageStyle" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/1.css" />
+    <style>
+      .p1 {
+        color: #3e5808;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="quangcao">
+      <div class="background">
+        <div class="noidungqc"><i class="fa fa-times tatqc"></i></div>
+      </div>
+    </div>
+
+    <div class="expenditure_apex mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="clearfix">
+              <div class="float-left">
+                <h3 class="text-theme">Shift Work</h3>
+                <p>This section is only for cashier</p>
+              </div>
+              <!-- float-left -->
+              <div class="float-right">
+                <button
+                  class="btn btn-round btn-outline-success sweet-12"
+                  
+                >
+                  <i class="fa fa-check-square-o"></i>Complete Shift
+                </button>
+                <button
+                  class="btn btn-round btn-outline-primary"
+                  data-toggle="modal"
+                  data-target=".bs-live-example-modal"
+                >
+                  <i class="icon-round mdi mdi-arrow-down-bold-box"></i>Nhập thêm
+                </button>
+              </div>
+            </div>
+          </div>
+          <form action="" name="frm_expenditure_apex">
+            <table class="table table-bordered table_expenditure_apex">
+              <thead class="thead-light">
+                <tr>
+                  <th id="timer" class="clearfix" colspan="3">
+                    <!-- Ngày: 06 Tháng: 1 Năm: 2018 -->
+                  </th>
+                  <th colspan="3">Nhân viên: Nguyễn Văn A</th>
+                  <th colspan="2">
+                    <div class="">Thời gian:</div>
+                    <div class="form-row">
+                      <div class="col-sm-6">
+                        <input
+                          type="time"
+                          class="form-control input_number"
+                          value="12:20"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="time" class="form-control input_number" />
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+
+                <tr>
+                  <th>Loại</th>
+                  <th>Đầu ca</th>
+                  <th>Nhập thêm</th>
+                  <th>Tổng cộng</th>
+                  <th>Cuối ca</th>
+                  <th>Bán</th>
+                  <th>Khuyến mại</th>
+                  <th>Thành tiền</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Nước 6k</th>
+                  <td>
+                    <input
+                      type="text"
+                      id="first_products"
+                      name="first_products"
+                      class="form-control input_number first_products"
+                      readonly
+                      value="524"
+                      onfocus="clickMe();"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="text"
+                      name="input_add_products"
+                      class="form-control input_number input_add_products"
+                      onchange="checkItem(this.value);"
+                      onfocus="checkItem();"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="text"
+                      name="gross_product"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="text"
+                      name="final_products"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_disabled"
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="into_money"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Nước 8k</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number promotions"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Nước 10k</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_disabled"
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Nước 12k</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_disabled"
+                      disabled
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Thăng long</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <inputtype="text" class="form-control input_number
+                    input_disabled" disabled>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Thuốc Vina</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <inputtype="text" class="form-control input_number
+                    input_disabled" disabled>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Bim bim</th>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number first_products"
+                      value="542"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number input_add_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number gross_product"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number final_products"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number quantity_sold"
+                      value="1102"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <inputtype="text" class="form-control input_number
+                    input_disabled" disabled>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number into_money"
+                      value="2626"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Tiền máy</th>
+                  <th>Tiền thẻ</th>
+                  <th>Tiền Dịch vụ</th>
+                  <th>Thu khác</th></th>
+                  <td colspan="5" rowspan="5">
+                    <textarea name="" id="" class="note"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" class="form-control input_number" />
+                  </td>
+                  <td>
+                    <input type="text" class="form-control input_number" />
+                  </td>
+                  <td>
+                    <input type="text" class="form-control input_number" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number"
+                      value="2686"
+                      readonly
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>Tổng tiền</th>
+                  <th>Tổng chi</th>
+                  <th colspan="2">Còn lại</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control input_number"
+                      value="6868"
+                      readonly
+                    />
+                  </td>
+                  <td>
+                    <input type="text" class="form-control input_number" />
+                  </td>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      class="form-control input_number"
+                      value="5301"
+                      readonly
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="logocuoitrang">
+      <div class="ndlogoct">
+        <div class="nuttatlogo">Tắt quảng cáo</div>
+        <div class="d1">
+          <a href=""
+            ><img src="img/uploads/logo_apex.png" alt="" class="img-fluid"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function startTime() {
+        var today = new Date();
+        var day = today.getDay();
+        var date = today.getDate();
+        var month = today.getMonth();
+        var year = today.getFullYear();
+        var days = new Array(
+          "Chủ Nhật",
+          "Thứ 2",
+          "Thứ 3",
+          "Thứ 4",
+          "Thứ 5",
+          "Thứ 6",
+          "Thứ 7"
+        );
+        var months = new Array(
+          "Tháng 1",
+          "Tháng 2",
+          "Tháng 3",
+          "Tháng 4",
+          "Tháng 5",
+          "Tháng 6",
+          "Tháng 7",
+          "Tháng 8",
+          "Tháng 9",
+          "Tháng 10",
+          "Tháng 11",
+          "Tháng 12"
+        );
+        date = checkTime(date);
+        function checkTime(i) {
+          if (i < 10) {
+            i = "0" + i;
+          }
+          return i;
+        }
+        /*var t = setTimeout(function(){
+				startTime();
+			},500);*/
+        document.getElementById("timer").innerHTML =
+          days[day] + ", Ngày " + date + " " + months[month] + " Năm " + year;
+      }
+      startTime();
+    </script>
+
+
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/PACE/pace.min.js"></script>
+    <script src="libs/chart.js/dist/Chart.min.js"></script>
+    <script src="libs/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <script src="libs/jquery-knob/dist/jquery.knob.min.js"></script>
+
+    <script src="libs/bootbox/bootbox.min.js"></script>
+    <script src="libs/sweetalert/sweetalert.js"></script>
+    <script src="libs/jquery-loading/dist/jquery.loading.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bootbox-sweetalert-example.js"></script>
+
+    <script type="text/javascript" src="js/1.js"></script>
+  </body>
+</html>
